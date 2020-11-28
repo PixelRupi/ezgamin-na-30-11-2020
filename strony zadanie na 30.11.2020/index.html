@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="PL" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styl.css">
+  </head>
+  <body>
+
+    <script type="text/javascript">
+
+
+      function jaka_liczba() {
+        var liczba = parseFloat(prompt("Podaj liczbe"));
+
+        if (liczba == 0) {
+          alert("Liczba " + liczba + " to zero");
+        } else if (liczba < 0) {
+          alert("Liczba " + liczba + " jest ujemna");
+        } else if (liczba > 0) {
+          alert("Liczba " + liczba + " jest dodatnia");
+        } else {
+          alert("Coś poszło nie tak");
+        }
+      }
+
+      function zakres() {
+        wynik = "";
+        var poczatek = parseFloat(prompt("Podaj liczbe początkową:"));
+        var koniec = parseFloat(prompt("Podaj liczbe końcową:"));
+
+
+        if (poczatek < koniec) {
+          for (var i = poczatek; i < koniec; i++) {
+            wynik += i + " ,";
+          }
+        } else {
+          for (var j = poczatek; j > koniec; j--) {
+            console.log(j);
+            wynik += j + " ,";
+          }
+        }
+        alert(wynik);
+      }
+
+    </script>
+
+
+    <center>
+      <div id="box">
+
+        <div id="baner">
+          <img src="baner.jpeg" width="778" height="150">
+        </div>
+
+        <div id="panel_lewy">
+          <h2>MENU</h2> <br>
+          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Opis</a><br>
+          <a onclick="jaka_liczba()" href="#">Jaka to liczba?</a> <br>
+          <a onclick="zakres()" href="#">Liczby całkowite z zakresu</a>
+        </div>
+
+        <div id="panel_prawy">
+          Zawartość stron
+        </div>
+
+      </div>
+
+      </center>
+  </body>
+</html>
